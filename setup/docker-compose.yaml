@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  postgres:
+    image: "postgres:15.5"
+    volumes:
+      - ./pg-init/:/docker-entrypoint-initdb.d/
+      - ./schema/:/sql_files/
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_MULTIPLE_DATABASES
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - POSTGRES_HOST
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U keycloak -d postgres" ]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+    ports:
+      - 5442:5432
+    container_name: dev-postgres
+
+volumes:
+  postgres-data:

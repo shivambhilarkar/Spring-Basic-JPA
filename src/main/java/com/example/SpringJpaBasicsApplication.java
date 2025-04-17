@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SpringJpaBasicsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringJpaBasicsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringJpaBasicsApplication.class, args);
+    }
 	
 	/*
 	@Bean

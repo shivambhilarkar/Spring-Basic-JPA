@@ -1,4 +1,5 @@
-package com.example.SpringJPABasics;
+package com.example.model;
+
 import javax.persistence.*;
 
 import static javax.persistence.GenerationType.SEQUENCE;
