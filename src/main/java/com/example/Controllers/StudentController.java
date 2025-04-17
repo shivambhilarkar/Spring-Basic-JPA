@@ -39,11 +39,11 @@ public class StudentController {
     public void addStudents() {
         //dummy objects
         Student shivam = new Student("Shivam", "Bhilarkar", "shivam@gmail.com", 23);
-        Student vaishnavi = new Student("Vaishnavi", "Bhilarkar", "vaishnavi@gmail.com", 23);
+        Student anas = new Student("anas", "patni", "anas@gmail.com", 23);
         Student manish = new Student("Manish", "Jadhav", "manish@gmail.com", 23);
 
         //use the JPA inbuilt method to save list
-        studentRepository.saveAll(List.of(shivam, vaishnavi, manish));
+        studentRepository.saveAll(List.of(shivam, anas, manish));
     }
 
     @GetMapping
